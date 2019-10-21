@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+body {
+    text-align: center;
+    background: linear-gradient(to left, #ff7b00, #0015ff);
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    color: black;
+    padding-top: 20px;
+}
+
+.grids {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.controls > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1.3px solid #03c2fc;
+    outline: none;
+    background-color: cornflowerblue;
+}
+
+.controls > button:hover {
+    background-color: #03fc20;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: cornflowerblue;
+    font-size: 2rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .prevNum {
+    color: rgba(0, 0, 0, .75);
+
+}
+
+.output .currNum {
+    color: white;
+    
+}
